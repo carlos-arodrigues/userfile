@@ -40,7 +40,7 @@ public class UserFile implements Serializable {
 	public UserFile() {
 	}
 
-	public UserFile(String name, String location, String text) {
+	private UserFile(String name, String location, String text) {
 		Validate.validState(name != null && !name.contains(" ") && name.length() <= 50);
 		Validate.validState(location != null && location.length() <= 100);
 		this.name = name;
